@@ -603,10 +603,10 @@ function searchAgent(){
   const found=sameIdRows.find(row=>datesEqual(getByKeyLoose(row,"Ngày gia nhập"), ngayRaw));
 
   if(!found){
-    if(sameIdRows.length===0) alert(`Không tìm thấy mã đại lý "${idRaw}" trong dữ liệu.`);
+    if(sameIdRows.length===0) alert('Không tìm thấy đại lý phù hợp với thông tin bạn nhập!');
     else{
       const goiYNgay=sameIdRows.map(r=>String(getByKeyLoose(r,"Ngày gia nhập")||'')).filter(Boolean);
-      alert(`Đã thấy mã "${idRaw}" nhưng ngày không khớp.\nBạn nhập: ${ngayRaw}\nCác ngày có trong dữ liệu: ${goiYNgay.join(', ')}`);
+      alert(Không tìm thấy đại lý phù hợp với thông tin bạn nhập!);
     }
     return;
   }
